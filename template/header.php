@@ -88,7 +88,7 @@ desired effect
               <!-- The user image in the navbar-->
               
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Здравствуйте, Джон Смит Тимофеевич</span>
+              <span class="hidden-xs">Здравствуйте, <?php ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
@@ -101,14 +101,16 @@ desired effect
                 </p>
               </li>
               <!-- Menu Body -->
-              
-              <!-- Menu Footer-->
-              <li class="user-footer">
+
+              <!-- Menu Footer-->             
+              <li class="user-footer">              
                 <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Профиль</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Выход</a>
+                  <form method="POST">
+                    <button type="submit" class="btn btn-default btn-flat" name="out">Выход</button>
+                  </form>
                 </div>
               </li>
             </ul>
