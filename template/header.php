@@ -88,15 +88,15 @@ desired effect
               <!-- The user image in the navbar-->
               
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Здравствуйте, <?php ?></span>
+              <span class="hidden-xs">Здравствуйте, <?=$_SESSION['fio']?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
                 
 
-                <p>
-                Джон Смит Тимофеевич - администратор
+                <p><?=$_SESSION['fio']?>
+                  - <?=$_SESSION['roleName']?>
                   
                 </p>
               </li>
