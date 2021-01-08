@@ -1,19 +1,18 @@
-<!-- Sidebar Menu -->
-<ul class="sidebar-menu" data-widget="tree">
-        <li class="header">HEADER</li>
-        <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
-            <li><a href="#">Link in level 2</a></li>
-          </ul>
-        </li>
-      </ul>
-      <!-- /.sidebar-menu -->
+<aside class="main-sidebar">
+  <section class="sidebar">
+    <ul class="sidebar-menu" data-widget="tree">
+      <li
+      <?=($_SERVER['PHP_SELF']=='/index.php')?'class="active"':'';?>>
+
+      <a href="index.php"><i class="fa fa-calendar"></i><span>Главная</span></a>
+
+      </li>
+      <li class="header">Пользователи</li>
+
+      <li <?=($_SERVER['PHP_SELF']=='/list-teacher.php')?'class="active"':'';?>>
+
+        <a href="list-teacher.php"><i class="fa fa-users"></i><span>Преподаватели</span></a>
+      </li>
+    </ul>
+  </section>
+</aside>
