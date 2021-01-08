@@ -5,6 +5,9 @@ class Student extends Table{
     public $num_zach = '';
     
     function validate(){
-        return false;
+        if (!empty($this->gruppa_id)) {
+            return true;
+            }
+            return false;
     }
 }
