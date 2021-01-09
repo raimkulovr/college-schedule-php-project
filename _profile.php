@@ -22,4 +22,5 @@ if ($user) {
     <th>Роль</th>
     <td><?=$user->role;?></td>
 </tr>
+
 <?php } ?>

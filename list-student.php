@@ -19,10 +19,10 @@ require_once 'template/header.php';
 <div class="col-xs-12">
 <div class="box">
 <section class="content-header">
-    <h1>Список студентов</h1>
+    <h1><?=$header?></h1>
     <ol class="breadcrumb">
         <li><a href="/index.php"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li class="active">Список студентов</li>
+        <li class="active"><?=$header?></li>
     </ol>
 </section>
 <div class="box-body">
@@ -44,7 +44,7 @@ if ($students) {
             <th>Пол</th>
             <th>Дата рождения</th>
             <th>Группа</th>
-            
+            <th>Номер зачетки</th>
         </tr>
     </thead>
 
@@ -55,8 +55,8 @@ if ($students) {
                 echo '<td><a href="profile-student.php?id='.$student->user_id.'">'.$student->fio.'</a> '. '<a href="add-student.php?id='.$student->user_id.'"><i class="fa fa-pencil"></i></a></td>';
                 echo '<td>'.$student->gender.'</td>';
                 echo '<td>'.$student->birthday.'</td>';
-                echo '<td>'.$student->gruppa_id.'</td>';
-                
+                echo '<td>'.$student->gruppa.'</td>';
+                echo '<td>'.$student->zach.'</td>';
                 echo '</tr>';
             }
         ?>

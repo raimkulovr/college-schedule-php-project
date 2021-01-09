@@ -6,7 +6,7 @@ if (isset($_GET['id'])) {
     header('Location: 404.php');
 }
 $header = 'Профиль студента';
-$teacher = (new TeacherMap())->findProfileById($id);
+$student = (new StudentMap())->findProfileById($id);
 require_once 'template/header.php';
 ?>
 <div class="row">
@@ -32,7 +32,11 @@ require_once 'template/header.php';
                 <?php require_once '_profile.php';?>
                 <tr>
                     <th>Группа</th>
-                    <td><?=$student->gruppa_id;?></td>
+                    <td><?=$student->gruppa;?></td>
+                </tr>
+                <tr>
+                    <th>Номер зачетки</th>
+                    <td><?=$student->zach;?></td>
                 </tr>
                 <tr>
                     <th>Заблокирован</th>
