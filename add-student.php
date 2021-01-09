@@ -21,12 +21,10 @@ require_once 'template/header.php';
 <div class="box-body">
 <form action="save-student.php" method="POST">
     <?php require_once '_formUser.php'; ?>
-    <div class="form-group">
-        <label>Роль</label>
-        <select class="form-control" name="role_id">
-            <?= Helper::printSelectOptions($user->role_id, $userMap->arrRoles());?>
-        </select>
-    </div>
+    
+    <!-- роль -->
+    <input type="hidden" name="role_id" value="4" >
+    
     <div class="form-group">
     <label>Группа</label>
     <select class="form-control" name="gruppa_id">
