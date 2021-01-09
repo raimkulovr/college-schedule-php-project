@@ -12,7 +12,7 @@
     <h1><?=$header;?></h1>
     <ol class="breadcrumb">
         <li><a href="/index.php"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li><a href="list-gruppa.php">Группы</a></li>
+        <li><a href="list-gruppa.php">Список групп</a></li>
         <li class="active"><?=$header;?></li>
     </ol>
 </section>

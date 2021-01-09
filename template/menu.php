@@ -21,7 +21,9 @@
       <li <?=($_SERVER['PHP_SELF']=='/list-gruppa.php')?'class="active"':'';?>>
         <a href="list-gruppa.php"><i class="fa fa-users"></i><span>Группы</span></a>
       </li>
-
+      <li <?=($_SERVER['PHP_SELF']=='/list-otdel.php')?'class="active"':'';?>>
+        <a href="list-otdel.php"><i class="fa fa-users"></i><span>Отделения</span></a>
+      </li>
     </ul>
   </section>
 </aside>
