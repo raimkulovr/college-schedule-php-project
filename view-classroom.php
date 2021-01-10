@@ -2,8 +2,8 @@
 require_once 'secure.php';
 if (isset($_GET['id'])) {
     $id = Helper::clearInt($_GET['id']);
-    $special = (new SpecialMap())->findViewById($id);
-    $header = 'Просмотр специальности';
+    $classroom = (new ClassroomMap())->findViewById($id);
+    $header = 'Просмотр аудитории';
     require_once 'template/header.php';
     ?>
     <div class="row">
@@ -13,25 +13,21 @@ if (isset($_GET['id'])) {
     <h1><?=$header;?></h1>
     <ol class="breadcrumb">
         <li><a href="index.php"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li><a href="list-special.php">Список специальностей</a></li>
+        <li><a href="list-classroom.php">Список аудиторий</a></li>
         <li class="active"><?=$header;?></li>
     </ol>
     </section>
         <div class="box-body">
 
-        <a class="btn btn-success" href="add-special.php?id=<?=$id;?>">Изменить</a>
+        <a class="btn btn-success" href="add-classroom.php?id=<?=$id;?>">Изменить</a>
 
         </div>
         <div class="box-body">
 
             <table class="table table-bordered table-hover">
                 <tr>
-                    <th>Название</th>
-                    <td><?=$special->name;?></td>
-                </tr>
-                <tr>
-                    <th>Отделение</th>
-                    <td><?=$special->otdel;?></td>
+                    <th>Номер аудитории</th>
+                    <td><?=$classroom->name;?></td>
                 </tr>
                 
             </table>

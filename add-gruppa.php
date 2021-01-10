@@ -26,7 +26,7 @@
         <div class="form-group">
             <label>Специальность</label>
             <select class="form-control" name="special_id">
-                <?= Helper::printSelectOptions($gruppa->special_id, (new SpecialMap())->arrSpecials());?>
+            <?= Helper::printSelectOptions($gruppa->special_id, (new SpecialMap())->arrSpecials());?>
             </select>
         </div>
         <div class="form-group">

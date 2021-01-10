@@ -8,8 +8,8 @@ class GruppaMap extends BaseMap{
         if ($id) {
             $res = $this->db->query("SELECT gruppa_id, name, special_id, date_begin, date_end FROM gruppa WHERE gruppa_id = $id");
             return $res->fetchObject("Gruppa");
-        }
-        return new Gruppa();
+            }
+            return new Gruppa();
     }
     public function save(Gruppa $gruppa){
         if ($gruppa->validate()) {
