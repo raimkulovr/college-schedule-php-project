@@ -1,7 +1,7 @@
 <?php
 class SubjectMap extends BaseMap{
     public function arrSubjects(){
-        $res = $this->db->query("SELECT subject_id AS subject_id, name AS value FROM subject ");
+        $res = $this->db->query("SELECT subject_id AS id, name AS value FROM subject ");
         return $res->fetchAll(PDO::FETCH_ASSOC);
     }
     public function findById($id=null){

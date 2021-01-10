@@ -16,6 +16,10 @@
         <a href="list-student.php"><i class="fa fa-users"></i><span>Студенты</span></a>
       </li>
 
+      <li class="header">Расписание</li>
+      <li <?=($_SERVER['PHP_SELF']=='/list-teacher-schedule.php')?'class="active"':'';?>>
+        <a href="list-teacher-schedule.php"><i class="fa fa-calendar"></i><span>Управление расписанием</span></a>
+      </li>
 
       <li class="header">Справочники</li>
       <li <?=($_SERVER['PHP_SELF']=='/list-gruppa.php')?'class="active"':'';?>>
