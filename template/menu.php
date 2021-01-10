@@ -19,10 +19,13 @@
 
       <li class="header">Справочники</li>
       <li <?=($_SERVER['PHP_SELF']=='/list-gruppa.php')?'class="active"':'';?>>
-        <a href="list-gruppa.php"><i class="fa fa-users"></i><span>Группы</span></a>
+        <a href="list-gruppa.php"><i class="fa fa-book"></i><span>Группы</span></a>
       </li>
       <li <?=($_SERVER['PHP_SELF']=='/list-otdel.php')?'class="active"':'';?>>
-        <a href="list-otdel.php"><i class="fa fa-users"></i><span>Отделения</span></a>
+        <a href="list-otdel.php"><i class="fa fa-book"></i><span>Отделения</span></a>
+      </li>
+      <li <?=($_SERVER['PHP_SELF']=='/list-special.php')?'class="active"':'';?>>
+        <a href="list-special.php"><i class="fa fa-book"></i><span>Специальности</span></a>
       </li>
     </ul>
   </section>

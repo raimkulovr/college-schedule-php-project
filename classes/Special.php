@@ -6,6 +6,10 @@ class Special extends Table{
     public $active = 1;
 
     function validate(){
+        if (!empty($this->name) &&
+        !empty($this->otdel_id)){
+            return true;
+        }
         return false;
     }
 }
