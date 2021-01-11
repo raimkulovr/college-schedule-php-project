@@ -52,4 +52,25 @@ class LessonPlanMap extends BaseMap{
         . "LIMIT $ofset, $limit");
         return $res->fetchAll(PDO::FETCH_OBJ);
     }
+    public function arrPlanByTeacherId($id=null){
+        if ($id) {
+            $res = $this->db->query("SELECT lesson_plan.lesson_plan_id AS id, CONCAT(gruppa.name,' -> ',subject.name) AS value"
+            . " FROM lesson_plan INNER JOIN
+            gruppa ON lesson_plan.gruppa_id=gruppa.gruppa_id "
+            . "INNER JOIN subject ON
+            lesson_plan.subject_id=subject.subject_id "
+            . "WHERE lesson_plan.user_id=$id
+            ORDER BY gruppa.name, subject.name");
+            return $res->fetchAll(PDO::FETCH_ASSOC);
+            }
+            return [];
+    }
+
+    public function findById($id=null){
+        if ($id) {
+            $res = $this->db->query("SELECT lesson_plan_id, gruppa_id, subject_id, user_id FROM lesson_plan WHERE lesson_plan_id=$id");
+            return $res->fetchObject('LessonPlan');
+        }
+            return false;
+    }
 }

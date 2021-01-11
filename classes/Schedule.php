@@ -6,6 +6,12 @@ class Schedule extends Table{
     public $lesson_num_id = 0;
     public $classroom_id = 0;
     function validate(){
+        if (!empty($this->lesson_plan_id) &&
+        !empty($this->day_id) &&
+        !empty($this->lesson_num_id)&&
+        !empty($this->classroom_id)){
+        return true;
+        }
         return false;
     }
 }
