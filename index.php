@@ -5,7 +5,7 @@ $userIdentity = (new UserMap())->identity($_SESSION['id']);
 if ($userIdentity == UserMap::TEACHER) {
 $schedules = (new ScheduleMap())->findByTeacherId($_SESSION['id']);
 } elseif ($userIdentity == UserMap::STUDENT) {
-//здесь должен быть ваш код
+$schedules = (new ScheduleMap())->findByStudentId($_SESSION['id']);
 } else {
 $schedules = null;
 }
