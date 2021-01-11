@@ -1,5 +1,9 @@
 <?php
 require_once 'secure.php';
+if (!Helper::can('admin') && !Helper::can('manager')) {
+    header('Location: 404.php');
+    exit();
+    }
 $idUser = Helper::clearInt($_GET['idUser']);
 $idDay = Helper::clearInt($_GET['idDay']);
 if ((new TeacherMap())->findById($idUser) ->validate()) {

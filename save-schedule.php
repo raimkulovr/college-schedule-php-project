@@ -1,5 +1,9 @@
 <?php
 require_once 'secure.php';
+if (!Helper::can('admin') && !Helper::can('manager')) {
+    header('Location: 404.php');
+    exit();
+    }
 if (isset($_POST['lesson_plan_id'])) {
 $schedule = new Schedule();
 $schedule->lesson_plan_id = Helper::clearInt($_POST['lesson_plan_id']);

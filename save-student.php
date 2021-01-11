@@ -1,5 +1,9 @@
 <?php
 require_once 'secure.php';
+if (!Helper::can('admin') && !Helper::can('manager')) {
+    header('Location: 404.php');
+    exit();
+    }
 if (isset($_POST['user_id'])) {
     $user = new User();
     $user->lastname = Helper::clearString($_POST['lastname']);

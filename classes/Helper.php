@@ -40,4 +40,7 @@ class Helper {
    public static function hasFlash(){
      return (!empty($_SESSION['flash'])) ? true : false;
    }
+   public static function can($role){
+     return ($role === $_SESSION['role'])? true : false;
+   }
 }

@@ -1,5 +1,9 @@
 <?php
 require_once 'secure.php';
+if (!Helper::can('admin') && !Helper::can('manager')) {
+    header('Location: 404.php');
+    exit();
+    }
 if (isset($_POST['gruppa_id'])) {
     $gruppa = new Gruppa();
     $gruppa->gruppa_id = Helper::clearInt($_POST['gruppa_id']);

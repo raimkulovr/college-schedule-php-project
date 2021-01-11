@@ -1,5 +1,9 @@
 <?php
 require_once 'secure.php';
+if (!Helper::can('admin') && !Helper::can('manager')) {
+    header('Location: 404.php');
+    exit();
+    }
 if (isset($_POST['classroom_id'])) {
     $classroom = new Classroom();
     $classroom->classroom_id = Helper::clearInt($_POST['classroom_id']);
